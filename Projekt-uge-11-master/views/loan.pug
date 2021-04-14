@@ -1,0 +1,25 @@
+extends layout 
+
+block content
+    script.
+        function clickme() {
+            alert('You just borrowed a book');
+            postLoans()}
+    h1 Loan a book
+    table.disp
+        tr 
+            th Title 
+            //- th Author
+            //- th Publisher
+            //- th Year
+        each book in books
+            tr 
+                td #{book.title}
+                //-td #{book.authors.firstname} #{book.authors.lastname}
+                //- td #{book.published.publisher}
+                //- td #{book.published.year}
+                td   
+                    button(id='loanme') Loan
+
+//-             each copy in loanable-//
+//- -a(href='/loans?book._id')-/

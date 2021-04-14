@@ -1,0 +1,52 @@
+extends layout
+
+block content
+	h1= title
+	p Please register your new book
+	form(id='regbook' action='/bookform' method='post')
+		table
+			tr
+				td Title 
+				td
+					input(type='text' name='title' required)
+
+			tr
+				td Edition
+				td
+					input(type='text' name='edition' required)
+			tr
+				td Copyright
+				td
+					input(type='text' name='copyright' required)
+			tr
+				td Publisher  
+				td
+					input(type='text' name='publisher' required)
+			tr
+				td Year published   
+				td
+					input(type='text' name='year' required)
+			tr
+				td Publisher place   
+				td
+					input(type='text' name='place' required)
+			tr
+				td Author firstname 
+				td
+					input(type='text' name='firstname' required)
+			tr
+				td Author middlename 
+				td
+					input(type='text' name='middlename')
+			tr
+				td Author lastname
+				td
+					input(type='text' name='lastname' required)
+			tr
+				td Bookcopies
+				td
+					input(type='number' name='noofcopies' required)
+			tr
+				td
+				td
+					input(type='submit' value='Go')

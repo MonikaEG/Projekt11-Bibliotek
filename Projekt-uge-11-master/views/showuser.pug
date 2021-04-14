@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    h1= title
+    p Show users here
+    main
+    table
+         each user in users
+            tr
+                td #{user.id}
+                td #{user.password}
+                td #{user.cpr}
+                td #{user.currentpenalties}
+                td #{user.email}
+                td #{user.firstname}
+                td #{user.middelname}
+                td #{user.lastname}
+                td #{user.newsletter}

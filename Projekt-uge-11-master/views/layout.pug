@@ -1,0 +1,36 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(type='module' src='/javascript/nQuery.js')
+    script(type='module' src='/javascript/page.js')
+  body
+    header
+      nav.navigation
+        ul
+          li
+            a(href="/") Home
+          li
+            a(href="/showbooks") Show registered books
+          li
+            a(href="/userform") Register user
+          if authenticated
+            //- Hvis logged in
+            li
+              a(href="/bookform") Register Books
+            li
+              a(href="/showuser") Show user
+            li
+              a(href="/reservation") Reservations
+            li
+              a(href="/loan") Loans
+          if !authenticated
+            //- if ! betyder if not
+            li 
+              a(href='/') Login
+          else
+            li 
+              a(href='/logout') Logout 
+    main
+      block content

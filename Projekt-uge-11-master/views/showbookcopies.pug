@@ -1,0 +1,11 @@
+extends layout
+
+block content
+    h1= title
+    p Show bookcopies here
+    main
+    table
+         each book in bookcopies
+            tr
+                td #{book.bookid}
+                td #{book.id}
